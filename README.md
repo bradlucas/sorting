@@ -1,10 +1,20 @@
 # sorting
 
-A Clojure library designed to ... well, that part is up to you.
+Some basic sorting algorithms implemented in Clojure. These sometime come up in conversations (interviews). 
+
+If you run -main with a number as a parameter you can get a feel for how fast each sort is.
+
+
+- bubble
+- selection
+- quicksort
+- merge
 
 ## Usage
 
-FIXME
+Run all the sorts on a list of random integers [num].
+
+$ lein run [num]
 
 ## License
 

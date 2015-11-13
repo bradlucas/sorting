@@ -1,15 +1,17 @@
 (ns sorting.selection)
 
-;; @see https://www.khanacademy.org/computing/computer-science/algorithms/sorting-algorithms/a/sorting
-
+;; ----------------------------------------------------------------------------------------------------
+;;
 ;; Find the smallest element and swap it with the first element
 ;; Find the second-smallest and swap it with the second card
 ;; Repeat finding the next smallest card and swapping it into the correct next position
+;;
+;; @see https://www.khanacademy.org/computing/computer-science/algorithms/sorting-algorithms/a/sorting
+;; ----------------------------------------------------------------------------------------------------
 
 
 (defn smallest 
   [xs]
-  ;; (println xs)
   (loop [elm (first xs)
          xs (rest xs)]
     (if (not (seq xs))
@@ -40,3 +42,11 @@
             next (remove-element elm xs)
             ]
         (recur (conj acc elm) next)))))
+
+
+;; |----------------+-----------------+---------------+-------------|
+;; | Algorithm      | Time complexity |               |             |
+;; |                | Best cases      | Average cases | Worst cases |
+;; |----------------+-----------------+---------------+-------------|
+;; | Selection Sort | O(n2)           | O(n2)         | O(n2)       |
+;; |----------------+-----------------+---------------+-------------|
