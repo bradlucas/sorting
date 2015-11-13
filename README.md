@@ -7,6 +7,7 @@ If you run -main with a number as a parameter you can get a feel for how fast ea
 
 - bubble
 - selection
+- insertion
 - quicksort
 - merge
 
