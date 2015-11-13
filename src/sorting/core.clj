@@ -2,10 +2,9 @@
   (:refer-clojure :exclude [merge])
   (:use [sorting.bubble]
         [sorting.selection]
+        [sorting.insertion]
         [sorting.quicksort]
         [sorting.merge]))
-
-        ;; [sorting.insertion]
 
 
 ;; |----------------+-----------------+---------------+-------------|
@@ -43,6 +42,7 @@
     (println "----------------------------------------------------------------------------------------------------\n")
     (println "Bubble     :" (time-run-with-results bubble-sort nums))
     (println "Selection  :" (time-run-with-results selection-sort nums))
+    (println "Insertion  :" (time-run-with-results insertion-sort nums))    
     (println "Quicksort  :" (time-run-with-results quicksort nums))
     (println "Merge      :" (time-run-with-results merge-sort nums))
     (println "----------------------------------------------------------------------------------------------------\n")))
