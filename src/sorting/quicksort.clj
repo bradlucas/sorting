@@ -11,36 +11,28 @@
 
 ;; Recurse by sorting each sub array in the same fashion.
 
-;; @see 6.4.1 Joy of Clojure
-(defn rand-ints [n]
-  (take n (repeatedly #(rand-int n))))
 
-(defn qsort
-  [xs1 xs2]
-
-  )
-
-(defn quicksort0
-  [xs]
-  ;; take the last element as the pivot
-  ;; return [..items less than pivot...] pivot [... items greater than pivot ...]
-  (println xs)
-  (if (seq xs)
-    (cond
-      (< (count xs) 2) xs
-      (= (count xs) 2) (let [a (first xs) b (second xs)] (if (< a b) [a b] [b a]))
-      :else (let [pivot (last xs)
-                  lst (drop-last xs)]
-              (loop [left []
-                     right []
-                     lst lst]
-                (if (not (seq lst))
-                  (conj (quicksort left) pivot (quicksort right))
-                  (let [val (first lst)]
-                    (println val)
-                    (if (< val pivot)
-                      (recur (conj left val) right (rest lst))
-                      (recur left (conj right val) (rest lst))))))))))
+;; (defn quicksort0
+;;   [xs]
+;;   ;; take the last element as the pivot
+;;   ;; return [..items less than pivot...] pivot [... items greater than pivot ...]
+;;   (println xs)
+;;   (if (seq xs)
+;;     (cond
+;;       (< (count xs) 2) xs
+;;       (= (count xs) 2) (let [a (first xs) b (second xs)] (if (< a b) [a b] [b a]))
+;;       :else (let [pivot (last xs)
+;;                   lst (drop-last xs)]
+;;               (loop [left []
+;;                      right []
+;;                      lst lst]
+;;                 (if (not (seq lst))
+;;                   (conj (quicksort left) pivot (quicksort right))
+;;                   (let [val (first lst)]
+;;                     (println val)
+;;                     (if (< val pivot)
+;;                       (recur (conj left val) right (rest lst))
+;;                       (recur left (conj right val) (rest lst))))))))))
 
 
 
@@ -48,7 +40,7 @@
   [xs]
   ;; take the last element as the pivot
   ;; return [..items less than pivot...] pivot [... items greater than pivot ...]
-  (println xs)
+  ;; (println xs)
   (if (seq xs)
     (cond
       (< (count xs) 2) xs

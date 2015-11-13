@@ -1,4 +1,6 @@
-(ns sorting.merge)
+(ns sorting.merge
+  (:refer-clojure :exclude [merge])
+)
 
 ;; Recursively divide the vector until you have a pair of numbers or a single number.
 ;; - If you have a single number return it.

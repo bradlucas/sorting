@@ -9,11 +9,11 @@
 
 (defn smallest 
   [xs]
-  (println xs)
+  ;; (println xs)
   (loop [elm (first xs)
          xs (rest xs)]
     (if (not (seq xs))
-      (let [e elm] (println e) e)
+      elm
       (let [next (first xs)]
         (if (< next elm)
           (recur next (rest xs))
